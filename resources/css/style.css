@@ -6,6 +6,7 @@
     --bs-link-hover-color: #0a58ca;
     --bs-gray-600: #6c757d;
     --bs-light: #f8f9fa;
+    --color-side-bar: #051e34;
 }
 
 .hype-text-green {
@@ -64,6 +65,16 @@
     background-color: var(--bs-light);
 }
 
+.hype-text-light {
+    color: var(--bs-light);
+}
+
+.hype-bg-sidebar {
+    background-color: var(--color-side-bar);
+}
+
+
+
 /*Document*/
 
 body {
@@ -93,18 +104,37 @@ body {
 
 
 
-
-
 /*main*/
 
 main {
     padding-top: 80px;
 }
 
-/*header*/
-header {
+/*side-bar*/
+#hype-sidebar {
     width: 150px;
+    background-image: url(../img/sidebar-bg.png);
 }
+
+#hype-sidebar-top div,
+#hype-sidebar-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hype-sidebar-top div:hover,
+#hype-sidebar-bottom:hover {
+    background-color: var(--bs-gray-600);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 #content {
     width: calc(100% - 150px);
