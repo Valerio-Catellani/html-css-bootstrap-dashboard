@@ -106,6 +106,15 @@ body {
     width: 30px;
 }
 
+#hype-top-navbar .hype-navbar-right li {
+    padding: 10px
+}
+
+#hype-top-navbar .hype-navbar-right ul li:nth-child(2) a .hype-icon-container {
+    height: 25px;
+    width: 25px;
+}
+
 
 /*main*/
 
@@ -158,6 +167,10 @@ main {
 
 #add-student {
     min-width: 180px;
+}
+
+.hype-width-65 {
+    width: 65% !important;
 }
 
 /*card-table*/
