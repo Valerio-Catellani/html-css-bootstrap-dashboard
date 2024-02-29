@@ -1,0 +1,111 @@
+:root {
+    --bs-green: #198754;
+    --bs-yellow: #ffc107;
+    --bs-red: #dc3545;
+    --bs-blue: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-gray-600: #6c757d;
+    --bs-light: #f8f9fa;
+}
+
+.hype-text-green {
+    color: var(--bs-green);
+}
+
+.hype-bg-green {
+    background-color: var(--bs-green);
+}
+
+.hype-text-yellow {
+    color: var(--bs-yellow);
+}
+
+.hype-bg-yellow {
+    background-color: var(--bs-yellow);
+}
+
+.hype-text-red {
+    color: var(--bs-red);
+}
+
+.hype-bg-red {
+    background-color: var(--bs-red);
+}
+
+.hype-text-blue {
+    color: var(--bs-blue);
+}
+
+.hype-bg-blue {
+    background-color: var(--bs-blue);
+}
+
+.hype-text-link-hover {
+    color: var(--bs-link-hover-color);
+}
+
+.hype-bg-link-hover {
+    background-color: var(--bs-link-hover-color);
+}
+
+.hype-text-gray-600 {
+    color: var(--bs-gray-600);
+}
+
+.hype-bg-gray-600 {
+    background-color: var(--bs-gray-600);
+}
+
+.hype-text-light {
+    color: var(--bs-light);
+}
+
+.hype-bg-light {
+    background-color: var(--bs-light);
+}
+
+/*Document*/
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*navbar*/
+
+#hype-top-navbar {
+    height: 80px;
+}
+
+#hype-top-navbar .hype-navbar-logo-container {
+    min-width: 80px;
+    width: 80px;
+}
+
+#hype-top-navbar .hype-navbar-right {
+    width: 30px;
+}
+
+#hype-top-navbar .hype-navbar-right ul li:not(:last-child),
+#hype-top-navbar .hype-navbar-logo-container a img:first-child {
+    display: none;
+}
+
+
+
+
+
+/*main*/
+
+main {
+    padding-top: 80px;
+}
+
+/*header*/
+header {
+    width: 150px;
+}
+
+#content {
+    width: calc(100% - 150px);
+}

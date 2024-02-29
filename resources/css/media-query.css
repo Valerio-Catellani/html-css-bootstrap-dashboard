@@ -1,0 +1,54 @@
+/*** MEDIA QUERY - MOBILE FIRST ***/
+/*(min-width=da valore fino a infinito)*/
+
+/* @media all and (min-width: 576px) {} /**/
+/*
+
+@media all and (min-width: 768px) {}/**/
+/*
+
+@media all and (min-width: 992px) {}/**/
+/*
+
+@media all and (min-width: 1200px) {}/**/
+/*
+
+@media all and (min-width: 1400px) {} */
+
+/*** MEDIA QUERY - DESKTOP FIRST ***/
+/*(max-width=da 0 fino a valore)*/
+
+/* @media all and (max-width: 1400px) {}
+
+@media all and (max-width: 1200px) {}
+
+@media all and (max-width: 992px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 576px) {} */
+
+
+@media all and (min-width: 992px) {
+
+    /*navbar*/
+    #hype-top-navbar .hype-navbar-logo-container {
+        min-width: 150px;
+        width: 150px;
+    }
+
+    #hype-top-navbar .hype-navbar-right {
+        width: 150px;
+    }
+
+    #hype-top-navbar .hype-navbar-right ul li:not(:last-child),
+    #hype-top-navbar .hype-navbar-logo-container a img:first-child {
+        display: block;
+    }
+
+    #hype-top-navbar .hype-navbar-logo-container a img:last-child {
+        display: none;
+    }
+
+
+}
