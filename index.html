@@ -15,7 +15,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="resources/css/utility.css">
   <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/css/animation.css">
   <link rel="stylesheet" href="resources/css/media-query.css">
@@ -50,7 +49,7 @@
             <a href="#" class="text-black ">
               <i class="fa-solid fa-ellipsis-vertical"></i></a>
           </li>
-          <li>
+          <li class="d-block ">
             <a href="#" class="hype-text-yellow">
               <i class="fa-solid fa-bell"></i></a>
           </li>
@@ -83,12 +82,11 @@
 
     <div id="content" class="h-100 overflow-y-auto ">
 
-
       <section id="hero" class="px-2 py-4 bg-primary text-white">
         <div class="row">
           <div id="add-student" class="col-12 col-md-4 col-lg-3 order-md-3 pb-1 d-flex justify-content-md-center ">
             <span class="text-capitalize pe-2">Nuovo studente</span>
-            <button class="hype-offcanvas rounded bg-primary text-white fs-3" type="button" data-bs-toggle="offcanvas"
+            <button type="button" class="btn btn-outline-light hype-offcanvas" data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel">
@@ -136,58 +134,217 @@
         </div>
       </section>
 
-
-
-      <div id="card-container " class="p-3 h-100 bg-light container-fluid ">
+      <div id="card-container" class="p-3 h-100 bg-light container-fluid ">
         <div class="row">
           <div class="col-12 col-lg-8">
-            <div class="card mb-4">
-              <div class="card-header">
+            <div id="next-classes" class="card mb-4">
+              <div class="card-header fw-bold fs-3 ">
                 Prossime Classi
               </div>
-              <table class="table">
+              <table class="table table-hover m-3 w-auto">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="d-none d-md-table-cell">Data Inizio</th>
+                    <th scope="col" class="text-uppercase d-none d-xl-table-cell ">roi</th>
+                    <th scope="col">Stato</th>
+                    <th scope="col">Azioni</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@lgo</td>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 75</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">15 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-success">Done</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 76</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">16 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-success">Done</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 77</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">17 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-warning text-white ">Process</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 78</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">18 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-success">Done</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 79</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">19 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-danger ">Failed</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 80</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">20 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-success">Done</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 81</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">21 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-danger">Failed</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="hype-class d-flex">
+                        <div
+                          class="hype-icon-container rounded-circle hype-bg-code d-flex align-items-center justify-content-center text-white ">
+                          <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="ps-2">Classe 82</span>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell ">22 febbraio 2021</td>
+                    <td class="d-none d-xl-table-cell ">20%</td>
+                    <td><span class="badge text-bg-success">Done</span></td>
+                    <td class="">
+                      <div class="d-flex">
+                        <button type="button" class="btn btn-outline-secondary me-1 p-0"><i
+                            class="fa-solid fa-pen small"></i></button>
+                        <button type="button" class="btn btn-outline-secondary ms-1 p-0"><i
+                            class="fa-solid fa-trash small"></i></button>
+                      </div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="card mb-4">
-              <div class="card-header text-uppercase">
-                f.a.q
+
+            <div id="faq" class="card mb-4">
+              <div class="card-header text-uppercase fw-bold fs-3">
+                f.a.q.
               </div>
               <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                       Accordion Item #1
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <strong>This is the first item's accordion body.</strong> It is shown by default, until the
                       collapse plugin adds the appropriate classes that we use to style each element. These classes

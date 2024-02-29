@@ -7,6 +7,8 @@
     --bs-gray-600: #6c757d;
     --bs-light: #f8f9fa;
     --color-side-bar: #051e34;
+    --color-code: #F26551;
+    --color-hover-table: #ECECEC;
 }
 
 .hype-text-green {
@@ -73,6 +75,10 @@
     background-color: var(--color-side-bar);
 }
 
+.hype-bg-code {
+    background-color: var(--color-code);
+}
+
 
 
 /*Document*/
@@ -128,6 +134,11 @@ main {
 }
 
 /*CONTENT*/
+
+#content {
+    width: calc(100% - 80px);
+}
+
 /*Section:HERO*/
 
 #hero .hype-small-badge {
@@ -149,6 +160,25 @@ main {
     min-width: 180px;
 }
 
-#content {
-    width: calc(100% - 80px);
+/*card-table*/
+
+#card-container #next-classes table thead tr th:not(:first-child),
+#card-container #next-classes table tbody td:not(:first-child) {
+    width: 5%;
+    text-align: center;
+}
+
+#card-container #next-classes table thead tr th:nth-child(2),
+#card-container #next-classes table tbody td:nth-child(2) {
+    width: 30% !important;
+}
+
+#card-container #next-classes table tbody td:first-child .hype-icon-container {
+    width: 25px;
+    height: 25px;
+}
+
+#card-container #next-classes table tbody td .btn {
+    width: 25px;
+    height: 25px;
 }
