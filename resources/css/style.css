@@ -81,6 +81,9 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.hype-pointer {
+    cursor: pointer;
+}
 
 /*navbar*/
 
@@ -97,12 +100,6 @@ body {
     width: 30px;
 }
 
-#hype-top-navbar .hype-navbar-right ul li:not(:last-child),
-#hype-top-navbar .hype-navbar-logo-container a img:first-child {
-    display: none;
-}
-
-
 
 /*main*/
 
@@ -112,16 +109,17 @@ main {
 
 /*side-bar*/
 #hype-sidebar {
-    width: 150px;
+    width: 80px;
     background-image: url(../img/sidebar-bg.png);
 }
 
 #hype-sidebar-top div,
 #hype-sidebar-bottom {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
+
 
 #hype-sidebar-top div:hover,
 #hype-sidebar-bottom:hover {
@@ -129,13 +127,28 @@ main {
     cursor: pointer;
 }
 
+/*CONTENT*/
+/*Section:HERO*/
 
+#hero .hype-small-badge {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#hero .hype-offcanvas {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border: #f8f9fa 1px solid;
+}
 
-
-
-
+#add-student {
+    min-width: 180px;
+}
 
 #content {
-    width: calc(100% - 150px);
+    width: calc(100% - 80px);
 }

@@ -41,14 +41,22 @@
         width: 150px;
     }
 
-    #hype-top-navbar .hype-navbar-right ul li:not(:last-child),
-    #hype-top-navbar .hype-navbar-logo-container a img:first-child {
-        display: block;
+
+
+
+    /*sidebar*/
+    #hype-sidebar {
+        width: 150px;
     }
 
-    #hype-top-navbar .hype-navbar-logo-container a img:last-child {
-        display: none;
+    #hype-sidebar-top div,
+    #hype-sidebar-bottom {
+        justify-content: flex-start;
     }
 
+
+    #content {
+        width: calc(100% - 150px);
+    }
 
 }

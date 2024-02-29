@@ -23,13 +23,12 @@
 </head>
 
 <body>
-
   <nav id="hype-top-navbar" class="navbar navbar-expand fixed-top bg-white ">
     <div class="container-fluid d-flex align-items-center ">
       <div class="hype-navbar-logo-container container-fluid p-0 me-2">
         <a class="navbar-brand d-flex align-items-center " href="#">
-          <img class="w-100" src="resources/img/logo.svg" alt="logo">
-          <img class="img-fluid " src="resources/img/mobile-logo.png" alt="mobile logo">
+          <img class="w-100 d-none d-lg-block" src="resources/img/logo.svg" alt="logo">
+          <img class="img-fluid d-block d-lg-none" src="resources/img/mobile-logo.png" alt="mobile logo">
         </a>
       </div>
       <form class="d-flex w-100" role="search">
@@ -38,16 +37,16 @@
       </form>
       <div class="hype-navbar-right ">
         <ul class="d-flex align-items-center justify-content-between m-0 ms-2 p-0 text-black  ">
-          <li>
+          <li class="d-none d-lg-block">
             <a href="#" class="text-black ">
               <i class="fa-solid fa-list"></i>
             </a>
           </li>
-          <li>
+          <li class="d-none d-lg-block">
             <a href="#" class="text-black ">
               <i class="fa-solid fa-question"></i></a>
           </li>
-          <li>
+          <li class="d-none d-lg-block">
             <a href="#" class="text-black ">
               <i class="fa-solid fa-ellipsis-vertical"></i></a>
           </li>
@@ -61,39 +60,84 @@
   </nav>
 
   <main class="vh-100 d-flex">
-
-
     <div id="hype-sidebar" class="h-100 p-3 d-flex flex-column justify-content-between hype-bg-sidebar text-white ">
       <div id="hype-sidebar-top" class="d-flex flex-column">
         <div class="p-2">
-          <i class="fa-solid fa-house pe-3 "></i>
-          <span>Home</span>
+          <i class="fa-solid fa-house pe-lg-3 "></i>
+          <span class="d-none d-lg-block">Home</span>
         </div>
         <div class="p-2">
-          <i class="fa-solid fa-chart-simple pe-4 "></i>
-          <span>Stats</span>
+          <i class="fa-solid fa-chart-simple pe-lg-4 "></i>
+          <span class="d-none d-lg-block">Stats</span>
         </div>
         <div class="p-2">
-          <i class="fa-solid fa-signal pe-3 "></i>
-          <span>Signal</span>
+          <i class="fa-solid fa-signal pe-lg-3 "></i>
+          <span class="d-none d-lg-block">Signal</span>
         </div>
       </div>
       <div id="hype-sidebar-bottom" class="p-2">
-        <i class="fa-solid fa-gear pe-3"></i>
-        <span>Admin</span>
+        <i class="fa-solid fa-gear pe-lg-3"></i>
+        <span class="d-none d-lg-block">Admin</span>
       </div>
     </div>
 
-
-
-
-
-
-
     <div id="content" class="h-100 overflow-y-auto ">
-      <div id="toolbar" class="p-5 bg-primary">
-        toolbar
-      </div>
+
+
+      <section id="hero" class="px-2 py-4 bg-primary text-white">
+        <div class="row">
+          <div id="add-student" class="col-12 col-md-4 col-lg-3 order-md-3 pb-1 d-flex justify-content-md-center ">
+            <span class="text-capitalize pe-2">Nuovo studente</span>
+            <button class="hype-offcanvas rounded bg-primary text-white fs-3" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                  lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tags" class="col-12 col-md-5 col-lg-6 py-3">
+            <h1 class="d-inline-block">Boolean</h1>
+            <span class="badge hype-bg-link-hover d-inline-block rounded-pill">Piano Blaze</span>
+            <br>
+            <span class="badge hype-bg-link-hover d-inline-block rounded-pill">3 app</span>
+            &#187;
+            <span class="badge d-inline-block d-lg-none p-0">
+              <div class="hype-small-badge hype-bg-link-hover rounded-circle hype-pointer ">
+                <span>+</span>
+              </div>
+            </span>
+            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean mobile app</span>
+            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean web app</span>
+            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean blog app</span>
+          </div>
+          <div id="community" class="col-12 col-md-3 col-lg-3">
+            <span class=" d-inline-block fs-6">Studenti online negli ultimi 30 minuti</span>
+            <h3>125</h3>
+          </div>
+        </div>
+      </section>
+
+
+
       <div id="card-container " class="p-3 h-100 bg-light container-fluid ">
         <div class="row">
           <div class="col-12 col-lg-8">
