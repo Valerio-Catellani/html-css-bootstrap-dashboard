@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <nav id="hype-top-navbar" class="navbar navbar-expand fixed-top bg-white ">
+  <nav id="hype-top-navbar" class="navbar navbar-expand fixed-top z-3 bg-white ">
     <div class="container-fluid d-flex align-items-center ">
       <div class="hype-navbar-logo-container container-fluid p-0 me-2">
         <a class="navbar-brand d-flex align-items-center " href="#">
@@ -31,8 +31,11 @@
         </a>
       </div>
       <form class="d-flex w-100" role="search">
-        <input class="form-control me-2 bg-light" type="search" placeholder="Prova a cercare: Lezioni di Laravel"
-          aria-label="Search">
+        <span class="input-group-text rounded-end-0" id="basic-addon1">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="Search" class="form-control me-2 bg-light rounded-start-0"
+          placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" aria-describedby="basic-addon1">
       </form>
       <div class="hype-navbar-right ">
         <ul class="d-flex align-items-center justify-content-between m-0 ms-2 p-0 text-black  ">
@@ -92,110 +95,109 @@
         <span class="d-none d-lg-block">Admin</span>
       </div>
     </div>
-
     <div id="content" class="h-100 overflow-y-auto ">
-
       <section id="hero" class="px-2 py-4 bg-primary text-white">
-        <div class="row w-100">
-          <div id="add-student" class="col-12 col-md-4 col-lg-3 order-md-3 pb-1 d-flex justify-content-md-center ">
-            <div class="d-flex align-items-center align-self-start">
-              <span class="text-capitalize pe-2">Nuovo studente</span>
-              <button type="button" class="btn btn-outline-light hype-offcanvas" data-bs-toggle="offcanvas"
-                data-bs-target="#add-user" aria-controls="offcanvasRight">+</button>
-              <div class="offcanvas offcanvas-end hype-width-65" tabindex="-1" id="add-user"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci nuovo studente</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div id="add-student" class="col-12 col-md-4 col-lg-3 order-md-3 pb-1 d-flex justify-content-md-center ">
+              <div class="d-flex align-items-center align-self-start">
+                <span class="text-capitalize pe-2">Nuovo studente</span>
+                <button type="button" class="btn btn-outline-light hype-offcanvas" data-bs-toggle="offcanvas"
+                  data-bs-target="#add-user" aria-controls="offcanvasRight">+</button>
+                <div class="offcanvas offcanvas-end hype-width-65" tabindex="-1" id="add-user"
+                  aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci nuovo studente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
 
-                <div class="offcanvas-body">
-
-                  <div class="row">
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="name-input" class="form-label">Nome</label>
-                        <input type="name" class="form-control" id="name-input">
+                  <div class="offcanvas-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="mb-3">
+                            <label for="name-input" class="form-label">Nome</label>
+                            <input type="name" class="form-control" id="name-input">
+                          </div>
+                          <div class="input-group mb-3 flex-wrap">
+                            <label for="email-input" class="form-label w-100">Email</label>
+                            <span class="input-group-text " id="basic-addon1">@</span>
+                            <input type="text" class="form-control" id="email-input" aria-label="email"
+                              aria-describedby="basic-addon1">
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="mb-3">
+                            <label for="cognome-input" class="form-label">Cognome</label>
+                            <input type="surname" class="form-control" id="cognome-input">
+                          </div>
+                          <div class="mb-3">
+                            <label for="password-input" class="form-label ">Password</label>
+                            <input type="password" class="form-control" id="password-input">
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label for="address-input" class="form-label">Indirizzo</label>
+                          <input type="address" class="form-control" id="address-input">
+                        </div>
+                        <div class="col-6 mb-3">
+                          <label for="city-input" class="form-label">Città</label>
+                          <input type="city" class="form-control" id="city-input">
+                        </div>
+                        <div class="col-4 mb-3">
+                          <label for="select-state" class="form-label">Stato</label>
+                          <select class="form-select" id="select-state">
+                            <option selected="">Scegli...</option>
+                            <option value="1">Boolandia</option>
+                            <option value="2">Bootstraplandia</option>
+                            <option value="3">Dropboxlandia</option>
+                          </select>
+                        </div>
+                        <div class="col-2 mb-3">
+                          <label for="cap-input" class="form-label">CAP</label>
+                          <input type="cap" class="form-control" id="cap-input">
+                        </div>
+                        <div class="col-12 input-group mb-3 flex-wrap ">
+                          <label for="photo-input" class="form-label w-100">Foto</label>
+                          <input type="file" class="form-control" id="photo-input">
+                        </div>
                       </div>
-                      <div class="input-group mb-3 flex-wrap">
-                        <label for="email-input" class="form-label w-100">Email</label>
-                        <span class="input-group-text " id="basic-addon1">@</span>
-                        <input type="text" class="form-control" id="email-input" aria-label="email"
-                          aria-describedby="basic-addon1">
+                      <div class="form-check pt-3 pb-3">
+                        <input class="form-check-input " type="checkbox" value="" id="tos">
+                        <label class="form-check-label" for="tos">
+                          Seleziona per proseguire
+                        </label>
                       </div>
-                    </div>
-                    <div class="col-6">
-                      <div class="mb-3">
-                        <label for="cognome-input" class="form-label">Cognome</label>
-                        <input type="surname" class="form-control" id="cognome-input">
-                      </div>
-                      <div class="mb-3">
-                        <label for="password-input" class="form-label ">Password</label>
-                        <input type="password" class="form-control" id="password-input">
-                      </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                      <label for="address-input" class="form-label">Indirizzo</label>
-                      <input type="address" class="form-control" id="address-input">
-                    </div>
-                    <div class="col-6 mb-3">
-                      <label for="city-input" class="form-label">Città</label>
-                      <input type="city" class="form-control" id="city-input">
-                    </div>
-                    <div class="col-4 mb-3">
-                      <label for="select-state" class="form-label">Stato</label>
-                      <select class="form-select" id="select-state">
-                        <option selected="">Scegli...</option>
-                        <option value="1">Boolandia</option>
-                        <option value="2">Bootstraplandia</option>
-                        <option value="3">Dropboxlandia</option>
-                      </select>
-                    </div>
-                    <div class="col-2 mb-3">
-                      <label for="cap-input" class="form-label">CAP</label>
-                      <input type="cap" class="form-control" id="cap-input">
-                    </div>
-                    <div class="col-12 input-group mb-3 flex-wrap ">
-                      <label for="photo-input" class="form-label w-100">Foto</label>
-                      <input type="file" class="form-control" id="photo-input">
+                      <button type="button" class="btn btn-primary">Salva</button>
+                      <button type="button" class="btn btn-warning">Svuota</button>
                     </div>
                   </div>
-                  <div class="form-check pt-3 pb-3">
-                    <input class="form-check-input " type="checkbox" value="" id="tos">
-                    <label class="form-check-label" for="tos">
-                      Seleziona per proseguire
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-primary">Salva</button>
-                  <button type="button" class="btn btn-warning">Svuota</button>
                 </div>
-
               </div>
             </div>
-
-          </div>
-          <div id="tags" class="col-12 col-md-5 col-lg-6 py-3">
-            <h1 class="d-inline-block">Boolean</h1>
-            <span class="badge hype-bg-link-hover d-inline-block rounded-pill">Piano Blaze</span>
-            <br>
-            <span class="badge hype-bg-link-hover d-inline-block rounded-pill">3 app</span>
-            &#187;
-            <span class="badge d-inline-block d-lg-none p-0">
-              <div class="hype-small-badge hype-bg-link-hover rounded-circle hype-pointer ">
-                <span>+</span>
-              </div>
-            </span>
-            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean mobile app</span>
-            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean web app</span>
-            <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean blog app</span>
-          </div>
-          <div id="community" class="col-12 col-md-3 col-lg-3">
-            <span class=" d-inline-block fs-6">Studenti online negli ultimi 30 minuti</span>
-            <h3>125</h3>
+            <div id="tags" class="col-12 col-md-5 col-lg-6 py-3">
+              <h1 class="d-inline-block">Boolean</h1>
+              <span class="badge hype-bg-link-hover d-inline-block rounded-pill">Piano Blaze</span>
+              <br>
+              <span class="badge hype-bg-link-hover d-inline-block rounded-pill">3 app</span>
+              &#187;
+              <span class="badge d-inline-block d-lg-none p-0">
+                <div class="hype-small-badge hype-bg-link-hover rounded-circle hype-pointer ">
+                  <span>+</span>
+                </div>
+              </span>
+              <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean mobile app</span>
+              <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean web app</span>
+              <span class="badge hype-bg-link-hover rounded-pill d-none d-lg-inline-block">Boolean blog app</span>
+            </div>
+            <div id="community" class="col-12 col-md-3 col-lg-3">
+              <span class=" d-inline-block fs-6">Studenti online negli ultimi 30 minuti</span>
+              <h3>125</h3>
+            </div>
           </div>
         </div>
-      </section>
 
+      </section>
       <div id="card-container" class="p-3 h-100 bg-light container-fluid ">
         <div class="row">
           <div class="col-12 col-lg-8">
@@ -478,7 +480,7 @@
             </div>
 
             <div id="active-users" class="card mb-4">
-              <div class="card">
+              <div class="card m-3">
                 <img src="resources/img/stats.jpeg" class="card-img-top" alt="graphic of active users">
                 <div class="card-body">
                   <h5 class="card-title">Utenti attivi</h5>
